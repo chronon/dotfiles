@@ -1,0 +1,7 @@
+# Dot Fish
+
+### Setup
+
+```
+./setup
+```
