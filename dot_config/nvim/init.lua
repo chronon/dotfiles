@@ -30,6 +30,7 @@ api.nvim_create_autocmd('FileType', {
 u.nmap('<Leader>hh', '<Cmd>nohl<CR>')
 u.nmap('<Leader>ac', '<Cmd>!docker-compose exec -T php bin/convert.php -w ../%<CR>')
 u.nmap('<Leader>tsh', '<Cmd>TSBufToggle highlight<CR>')
+u.nmap('<Leader>gg', '<Cmd>Git<CR>')
 
 u.xmap('<Leader>cc', '"+y')
 u.xmap('<LeftRelease>', '"*ygv')

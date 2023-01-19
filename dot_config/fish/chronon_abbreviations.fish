@@ -21,6 +21,6 @@ abbr --add composer "docker run --rm --interactive --tty --volume $PWD:/app comp
 
 abbr --add ghprce "git rebase --whitespace=fix origin/main && gh pr create --assignee @me --label enhancement"
 abbr --add ghprcb "git rebase --whitespace=fix origin/main && gh pr create --assignee @me --label bug"
-abbr --add ghprm "gh pr merge --admin --merge --delete-branch && git mp"
+abbr --add ghprm "gh pr merge --merge --delete-branch && git mp"
 abbr --add ghprv "gh pr view --web"
 abbr --add ghprc "gh pr checks"

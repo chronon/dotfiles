@@ -1,2 +1,6 @@
 [cd]
-  command = '/usr/local/bin/fish'
+  command = "/usr/local/bin/fish"
+
+[merge]
+  command = "nvim"
+  args = ["-d", "{{ .Destination }}", "{{ .Source }}", "{{ .Target }}"]
