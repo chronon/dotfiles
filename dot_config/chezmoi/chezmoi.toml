@@ -1,6 +1,10 @@
 [cd]
   command = "/usr/local/bin/fish"
 
+[diff]
+  command = "kitty"
+  args = ["+kitten", "diff", "{{ .Destination }}", "{{ .Target }}"]
+
 [merge]
   command = "nvim"
   args = ["-d", "{{ .Destination }}", "{{ .Source }}", "{{ .Target }}"]
