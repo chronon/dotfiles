@@ -41,7 +41,6 @@ return require('packer').startup(function()
   use_with_config('windwp/nvim-autopairs', 'autopairs')
   use_with_config('nvim-lualine/lualine.nvim', 'lualine')
   use_with_config('folke/trouble.nvim', 'trouble')
-  use_with_config('folke/which-key.nvim', 'which_key')
   use_with_config('williamboman/mason.nvim', 'mason')
 
   use {

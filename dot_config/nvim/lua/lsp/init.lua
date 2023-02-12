@@ -37,7 +37,7 @@ for _, server in ipairs({
   'intelephense',
   'jsonls',
   'stylelint_lsp',
-  'sumneko_lua',
+  'lua_ls',
   'tsserver',
   'yamlls',
   'tailwindcss',
