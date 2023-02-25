@@ -2,8 +2,7 @@
   command = "/usr/local/bin/fish"
 
 [diff]
-  command = "kitty"
-  args = ["+kitten", "diff", "{{ .Destination }}", "{{ .Target }}"]
+  command = "delta"
 
 [merge]
   command = "nvim"
