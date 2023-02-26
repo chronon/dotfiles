@@ -1,8 +1,13 @@
 local utils = {}
 
-function utils.merge(t1, t2)
-  for k,v in pairs(t2) do t1[k] = v end
-  return t1
+function utils.merge_all(...)
+  local ret = {}
+  for _, tbl in ipairs({ ... }) do
+    for k, v in pairs(tbl) do
+      ret[k] = v
+    end
+  end
+  return ret
 end
 
 return utils
