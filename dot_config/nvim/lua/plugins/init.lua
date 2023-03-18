@@ -42,6 +42,7 @@ return require('packer').startup(function()
   use_with_config('nvim-lualine/lualine.nvim', 'lualine')
   use_with_config('folke/trouble.nvim', 'trouble')
   use_with_config('williamboman/mason.nvim', 'mason')
+  use_with_config('norcalli/nvim-colorizer.lua', 'colorizer')
 
   use {
     'akinsho/toggleterm.nvim',
@@ -55,14 +56,8 @@ return require('packer').startup(function()
     opt = true,
   }
 
-  use {
-    'RRethy/vim-hexokinase',
-    config = config('hexokinase'),
-    run = 'make hexokinase'
-  }
-
   use('b0o/schemastore.nvim')
-  use ('williamboman/mason-lspconfig.nvim')
+  use('williamboman/mason-lspconfig.nvim')
   use('neovim/nvim-lspconfig')
 
   use {
@@ -93,5 +88,4 @@ return require('packer').startup(function()
     ft = { 'markdown' },
     opt = true
   })
-
 end)

@@ -40,7 +40,7 @@ u.xmap('<', '<gv')
 -- lazy loaded plugins
 u.nmap('<leader>,', '<cmd>PackerLoad nvim-tree.lua<cr><cmd>NvimTreeToggle<cr>')
 
-api.nvim_command("colorscheme $COLORSCHEME")
-
 require('plugins')
 require('lsp')
+
+api.nvim_command("colorscheme $COLORSCHEME")
