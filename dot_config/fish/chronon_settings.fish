@@ -11,6 +11,7 @@ set -Ux MANPAGER "sh -c 'col -bx | bat -l man -p'"
 fish_add_path "$HOME/bin"
 fish_add_path "$HOME/machines/core/bin"
 fish_add_path "/usr/local/bin"
+fish_add_path "$HOME/.local/bin"
 
 # theme overrides
 set -U fish_pager_color_prefix 'green' '--bold'
