@@ -37,6 +37,9 @@ u.xmap('<LeftRelease>', '"*ygv')
 u.xmap('>', '>gv')
 u.xmap('<', '<gv')
 
+-- black hole register
+u.xmap('p', '"_dP')
+
 -- lazy loaded plugins
 u.nmap('<leader>,', '<cmd>PackerLoad nvim-tree.lua<cr><cmd>NvimTreeToggle<cr>')
 

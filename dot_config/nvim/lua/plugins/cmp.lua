@@ -31,9 +31,9 @@ cmp.setup({
     ['<C-e>'] = cmp.mapping.abort(),
     ['<CR>'] = cmp.mapping.confirm({ select = true }),
     ['<C-CR>'] = cmp.mapping(function()
-        vim.api.nvim_feedkeys(vim.fn['copilot#Accept'](vim.api.nvim_replace_termcodes('<Tab>', true, true, true)), 'n', true)
-      end, { 'i', 's'}),
-
+      vim.api.nvim_feedkeys(vim.fn['copilot#Accept'](vim.api.nvim_replace_termcodes('<Tab>', true, true, true)), 'n',
+        true)
+    end, { 'i', 's' }),
     ['<Tab>'] = cmp.mapping(function(fallback)
       if cmp.visible() then
         cmp.select_next_item()
@@ -45,7 +45,6 @@ cmp.setup({
         fallback()
       end
     end, { 'i', 's' }),
-
     ['<S-Tab>'] = cmp.mapping(function()
       if cmp.visible() then
         cmp.select_prev_item()
@@ -78,7 +77,7 @@ cmp.setup.filetype('gitcommit', {
   })
 })
 
-cmp.setup.cmdline({'/', '?'}, {
+cmp.setup.cmdline({ '/', '?' }, {
   mapping = cmp.mapping.preset.cmdline(),
   sources = {
     { name = 'buffer' }
@@ -88,7 +87,12 @@ cmp.setup.cmdline({'/', '?'}, {
 cmp.setup.cmdline(':', {
   mapping = cmp.mapping.preset.cmdline(),
   sources = cmp.config.sources({
-    { name = 'path' }
+    {
+      name = 'path',
+      option = {
+        trailing_slash = true,
+      },
+    }
   }, {
     { name = 'cmdline' }
   })

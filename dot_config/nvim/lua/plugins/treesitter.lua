@@ -17,7 +17,10 @@ require('nvim-treesitter.configs').setup({
   },
   highlight = {
     enable = true,
-    disable = { 'php' },
+    disable = {
+      'php',
+      'yaml',
+    },
     -- disable = function(_, bufnr)
     --   return vim.api.nvim_buf_line_count(bufnr) > 5000
     -- end,
