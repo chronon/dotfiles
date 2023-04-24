@@ -34,7 +34,7 @@ return require('packer').startup(function()
     config = config('telescope')
   }
 
-  use_with_config('github/copilot.vim', 'copilot')
+  use_with_config('zbirenbaum/copilot.lua', 'copilot_lua')
   use_with_config('numToStr/Comment.nvim', 'comment')
   use_with_config('lewis6991/gitsigns.nvim', 'gitsigns')
   use_with_config('nvim-tree/nvim-web-devicons', 'devicons')
