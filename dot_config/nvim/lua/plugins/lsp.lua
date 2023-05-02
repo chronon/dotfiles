@@ -4,6 +4,10 @@ return {
     opts = {
       servers = {
         intelephense = {},
+        cssls = {},
+        html = {},
+        tsserver = {},
+        yamlls = {},
       },
     },
   },
