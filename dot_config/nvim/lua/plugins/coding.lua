@@ -1,5 +1,15 @@
 return {
   {
+    "L3MON4D3/LuaSnip",
+    keys = function()
+      return {}
+    end,
+    config = function()
+      require("luasnip.loaders.from_vscode").lazy_load({ paths = "~/.config/snippets" })
+    end,
+  },
+
+  {
     "hrsh7th/nvim-cmp",
     opts = function(_, opts)
       local has_words_before = function()
