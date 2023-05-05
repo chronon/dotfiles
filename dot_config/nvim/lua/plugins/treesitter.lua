@@ -1,28 +1,43 @@
-require('nvim-treesitter.configs').setup({
-  ensure_installed = {
-    'bash',
-    'css',
-    'dockerfile',
-    'fish',
-    'html',
-    'javascript',
-    'json',
-    'lua',
-    'markdown',
-    'php',
-    'phpdoc',
-    'scss',
-    'typescript',
-    'yaml',
-  },
-  highlight = {
-    enable = true,
-    disable = {
-      'php',
-      'yaml',
+return {
+  {
+    "nvim-treesitter/nvim-treesitter",
+    opts = {
+      ensure_installed = {
+        "bash",
+        "css",
+        "dockerfile",
+        "fish",
+        "html",
+        "javascript",
+        "json",
+        "json5",
+        "jsonc",
+        "lua",
+        "luadoc",
+        "markdown",
+        "markdown_inline",
+        "php",
+        "phpdoc",
+        "query",
+        "regex",
+        "scss",
+        "tsx",
+        "typescript",
+        "vim",
+        "vimdoc",
+        "yaml",
+      },
+      highlight = {
+        disable = {
+          "php",
+        },
+      },
+      indent = {
+        disable = {
+          "php",
+          "yaml",
+        },
+      },
     },
-    -- disable = function(_, bufnr)
-    --   return vim.api.nvim_buf_line_count(bufnr) > 5000
-    -- end,
-  }
-})
+  },
+}
