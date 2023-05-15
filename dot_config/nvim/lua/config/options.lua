@@ -6,4 +6,5 @@ vim.opt.timeoutlen = 500
 vim.opt.relativenumber = false
 vim.opt.shell = "/usr/local/bin/fish"
 vim.opt.linebreak = true
+vim.opt.undofile = false
 vim.opt.wrap = true
