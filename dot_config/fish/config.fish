@@ -1,6 +1,6 @@
 if status is-interactive
+    source "$__fish_config_dir/themes/$COLORSCHEME_FISH"
     source "$__fish_config_dir/chronon_secrets.fish"
-    source "$__fish_config_dir/themes/$COLORSCHEME.fish"
     source "$__fish_config_dir/chronon_settings.fish"
     source "$__fish_config_dir/chronon_abbreviations.fish"
     source "$__fish_config_dir/loadsys_abbreviations.fish"
