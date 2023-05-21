@@ -1,10 +1,16 @@
+local colorscheme = os.getenv("COLORSCHEME_NVIM") or "catppuccin"
+
 return {
-  { "rebelot/kanagawa.nvim" },
+  {
+    "rebelot/kanagawa.nvim",
+    lazy = true,
+    name = "kanagawa",
+  },
 
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "kanagawa",
+      colorscheme = colorscheme,
     },
   },
 
@@ -24,9 +30,15 @@ return {
     },
   },
 
-  -- {
-  --   "numToStr/Comment.nvim",
-  --   event = "VeryLazy",
-  --   config = true,
-  -- },
+  {
+    "NvChad/nvim-colorizer.lua",
+    keys = {
+      { "<leader>ct", "<cmd>ColorizerToggle<cr>", desc = "Colorizer Toggle" },
+    },
+  },
+
+  {
+    "windwp/nvim-autopairs",
+    config = true,
+  },
 }
