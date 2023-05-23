@@ -15,9 +15,4 @@ vim.api.nvim_create_autocmd("FileType", {
   command = "setlocal spell",
 })
 
-vim.api.nvim_create_autocmd("FileType", {
-  pattern = { "php" },
-  command = "setlocal commentstring=//\\ %s",
-})
-
 vim.api.nvim_create_user_command("PhpStan", "! bin/phpstan analyse %", {})
