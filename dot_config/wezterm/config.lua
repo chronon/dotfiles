@@ -1,17 +1,4 @@
-local colorscheme = "kanagawa"
-
-local colorschemes = {
-  kanagawa = {
-    wezterm = "Kanagawa (Gogh)",
-    fish = "kanagawa.fish",
-    nvim = "kanagawa",
-  },
-  tokyonight = {
-    wezterm = "Tokyo Night",
-    fish = "tokyonight_night.fish",
-    nvim = "tokyonight-night",
-  },
-}
+local colorscheme = require("colorschemes")
 
 local config = {
   font_size = 15,
@@ -21,10 +8,10 @@ local config = {
   window_decorations = "RESIZE",
   force_reverse_video_cursor = true,
 
-  color_scheme = colorschemes[colorscheme].wezterm,
+  color_scheme = colorscheme.wezterm,
   set_environment_variables = {
-    COLORSCHEME_FISH = colorschemes[colorscheme].fish,
-    COLORSCHEME_NVIM = colorschemes[colorscheme].nvim,
+    COLORSCHEME_FISH = colorscheme.fish,
+    COLORSCHEME_NVIM = colorscheme.nvim,
   },
 }
 
