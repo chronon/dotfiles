@@ -31,13 +31,6 @@ return {
   },
 
   {
-    "NvChad/nvim-colorizer.lua",
-    keys = {
-      { "<leader>ct", "<cmd>ColorizerToggle<cr>", desc = "Colorizer Toggle" },
-    },
-  },
-
-  {
     "windwp/nvim-autopairs",
     config = true,
   },
