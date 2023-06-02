@@ -23,3 +23,5 @@ wk.register({
 }, {
   mode = "x",
 })
+
+vim.api.nvim_create_user_command("PhpStan", "! bin/phpstan analyse %", {})
