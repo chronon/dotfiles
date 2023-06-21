@@ -5,6 +5,15 @@ return {
     "rebelot/kanagawa.nvim",
     lazy = true,
     name = "kanagawa",
+    opts = {
+      overrides = function(colors)
+        return {
+          IlluminatedWordText = { bg = colors.palette.waveBlue1 },
+          IlluminatedWordRead = { bg = colors.palette.waveBlue1 },
+          IlluminatedWordWrite = { bg = colors.palette.waveBlue1 },
+        }
+      end,
+    },
   },
 
   {
@@ -32,6 +41,7 @@ return {
 
   {
     "windwp/nvim-autopairs",
+    event = "InsertEnter",
     config = true,
   },
 }

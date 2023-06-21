@@ -28,6 +28,7 @@ return {
       filetypes_denylist = {
         "gitcommit",
       },
+      min_count_to_highlight = 2,
     },
   },
 }

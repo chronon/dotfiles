@@ -20,7 +20,7 @@ return {
       end
 
       opts.completion = {
-        autocomplete = {},
+        autocomplete = false,
       }
 
       local luasnip = require("luasnip")
@@ -30,7 +30,7 @@ return {
         ["<Tab>"] = cmp.mapping(function(fallback)
           if cmp.visible() then
             cmp.select_next_item()
-          elseif luasnip.expand_or_jumpable() then
+          elseif luasnip.expand_or_locally_jumpable() then
             luasnip.expand_or_jump()
           elseif has_words_before() then
             cmp.complete()
@@ -39,6 +39,17 @@ return {
           end
         end, { "i", "s" }),
       })
+
+      -- opts.sources = cmp.config.sources(vim.list_extend(opts.sources, {
+      --   {
+      --     name = "buffer",
+      --     option = {
+      --       get_bufnrs = function()
+      --         return vim.api.nvim_list_bufs()
+      --       end,
+      --     },
+      --   },
+      -- }))
     end,
   },
 }

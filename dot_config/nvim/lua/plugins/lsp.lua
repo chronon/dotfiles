@@ -14,6 +14,9 @@ return {
             },
           },
         },
+        tailwindcss = {
+          autostart = false,
+        },
       },
     },
   },
