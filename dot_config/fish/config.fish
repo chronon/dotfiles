@@ -1,5 +1,10 @@
 if status is-interactive
-    source "$__fish_config_dir/themes/$COLORSCHEME_FISH"
+    if test -n "$COLORSCHEME_FISH"
+        set colorscheme $COLORSCHEME_FISH
+    else
+        set colorscheme 'kanagawa.fish'
+    end
+    source "$__fish_config_dir/themes/$colorscheme"
     source "$__fish_config_dir/chronon_secrets.fish"
     source "$__fish_config_dir/chronon_settings.fish"
     source "$__fish_config_dir/chronon_abbreviations.fish"
