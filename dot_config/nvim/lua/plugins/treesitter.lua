@@ -27,14 +27,13 @@ return {
         "vimdoc",
         "yaml",
       },
-      -- highlight = {
-      --   disable = {
-      --     "php",
-      --   },
-      -- },
+      highlight = {
+        disable = {
+          "yaml",
+        },
+      },
       indent = {
         disable = {
-          -- "php",
           "yaml",
         },
       },

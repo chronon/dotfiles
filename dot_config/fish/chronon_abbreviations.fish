@@ -17,8 +17,8 @@ abbr --add kittydiff 'kitty +kitten diff'
 abbr --add debian-vm "ssh -t debian-vm 'fish'"
 abbr --add rename-ext "fd --extension ctp --exec mv {} {.}.php"
 abbr --add icat "kitty +kitten icat"
-abbr --add composer "docker run --rm --interactive --tty --volume $PWD:/app composer"
-abbr --add chz "chezmoi"
+# abbr --add composer "docker run --rm --interactive --tty --volume $PWD:/app composer"
+abbr --add chz chezmoi
 
 abbr --add ghprce "git rebase --whitespace=fix origin/main && gh pr create --assignee @me --label enhancement"
 abbr --add ghprcb "git rebase --whitespace=fix origin/main && gh pr create --assignee @me --label bug"

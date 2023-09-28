@@ -25,20 +25,4 @@ wk.register({
 })
 
 vim.api.nvim_create_user_command("PhpStan", "! bin/phpstan analyse %", {})
-
-local cmp = require("cmp")
-vim.api.nvim_create_user_command("CmpAutoOn", function()
-  cmp.setup({
-    completion = {
-      autocomplete = { require("cmp.types").cmp.TriggerEvent.TextChanged },
-    },
-  })
-end, {})
-
-vim.api.nvim_create_user_command("CmpAutoOff", function()
-  cmp.setup({
-    completion = {
-      autocomplete = {},
-    },
-  })
-end, {})
+vim.api.nvim_create_user_command("AnsibleFile", "setlocal ft=yaml.ansible", {})
