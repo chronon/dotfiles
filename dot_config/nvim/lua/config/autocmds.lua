@@ -11,7 +11,7 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
 vim.api.nvim_create_autocmd("FileType", {
   pattern = { "gitcommit", "markdown" },
   callback = function()
-    vim.cmd("IlluminateToggleBuf")
+    require("illuminate").toggle_buf()
     require("cmp").setup.buffer({ enabled = false })
   end,
 })
