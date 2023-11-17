@@ -32,5 +32,5 @@ if status is-interactive
         tail -f $argv | bat --paging=never --style=numbers --language log
     end
 
-    fzf_configure_bindings --history=\e\cr
+    # fzf_configure_bindings --history=\e\cr
 end

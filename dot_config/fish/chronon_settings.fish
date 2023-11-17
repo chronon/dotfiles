@@ -6,20 +6,28 @@ set -Ux PAGER 'bat --style plain'
 set -Ux EDITOR nvim
 set -Ux GPG_TTY (tty)
 set -Ux MANPAGER "sh -c 'col -bx | bat -l man -p'"
+set -Ux MANROFFOPT -c
 
 # paths
 fish_add_path "$HOME/bin"
 fish_add_path "$HOME/machines/core/bin"
-fish_add_path "/usr/local/bin"
+fish_add_path /usr/local/bin
 fish_add_path "$HOME/.local/bin"
 
+# fish_add_path "$HOME/.nix-profile/bin"
+# fish_add_path /nix/var/nix/profiles/default/bin
+
+if test -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.fish'
+    . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.fish'
+end
+
 # theme overrides
-set -U fish_pager_color_prefix 'green' '--bold'
+set -U fish_pager_color_prefix green --bold
 set -U fish_color_valid_path white
 
 # volta
-set -gx VOLTA_HOME "$HOME/.volta"
-set -gx PATH "$VOLTA_HOME/bin" $PATH
+# set -gx VOLTA_HOME "$HOME/.volta"
+# set -gx PATH "$VOLTA_HOME/bin" $PATH
 
 # keybindings
 # fish_vi_key_bindings

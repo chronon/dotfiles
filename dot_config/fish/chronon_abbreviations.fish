@@ -19,6 +19,7 @@ abbr --add rename-ext "fd --extension ctp --exec mv {} {.}.php"
 abbr --add icat "kitty +kitten icat"
 # abbr --add composer "docker run --rm --interactive --tty --volume $PWD:/app composer"
 abbr --add chz chezmoi
+abbr --add tailscale "/Applications/Tailscale.app/Contents/MacOS/Tailscale"
 
 abbr --add ghprce "git rebase --whitespace=fix origin/main && gh pr create --assignee @me --label enhancement"
 abbr --add ghprcb "git rebase --whitespace=fix origin/main && gh pr create --assignee @me --label bug"
