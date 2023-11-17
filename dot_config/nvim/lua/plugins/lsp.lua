@@ -7,7 +7,6 @@ return {
         cssls = {},
         html = {},
         tsserver = {},
-        ansiblels = {},
         yamlls = {
           settings = {
             yaml = {

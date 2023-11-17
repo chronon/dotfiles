@@ -29,4 +29,11 @@ vim.api.nvim_create_autocmd("ModeChanged", {
   end,
 })
 
+vim.api.nvim_create_autocmd({ "FileType" }, {
+  pattern = { "nix" },
+  callback = function()
+    vim.opt_local.commentstring = "# %s"
+  end,
+})
+
 vim.api.nvim_del_augroup_by_name("lazyvim_highlight_yank")
